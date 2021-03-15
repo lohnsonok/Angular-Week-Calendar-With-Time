@@ -1,0 +1,9 @@
+<div class="calendar-day">
+  <div class="calendar-day-name">{{dayName}}</div>
+  <div class="calendar-day-name">{{dayMonth}}</div>
+  <div class="calendar-day-content">
+    <div *ngFor="let time of times" class="calendar-hour" (click)="openDialog(time)">
+      {{ time }}
+    </div>
+  </div>
+</div>
