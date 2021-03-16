@@ -1,9 +1,9 @@
-# Simple Weekday Calendar Component
+# Simple Week Calendar Component Based On Working Business Days
 
 ## Demo
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.
 
 ## Development server
 
