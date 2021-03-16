@@ -1,7 +1,7 @@
 <button (click)="prevWeek(currentWeek[0])">Prev</button>
 <button (click)="nextWeek(currentWeek[currentWeek.length - 1])">Next</button>
 <div class="calendar-component">
-  <app-calendar-day *ngFor="let day of currentWeekActive; let dayNumber = index" dayName="{{day | dayDatePipe}}"
-    dayMonth="{{day | monthDatePipe}}" [timesToExcludePerDay]="timesToExcludePerDay[dayNumber]">
+  <app-calendar-day *ngFor="let day of currentWeekActive; let dayNumber = index"
+    [timesToExcludePerDay]="timesToExcludePerDay[dayNumber]" day="{{day}}">
   </app-calendar-day>
 </div>

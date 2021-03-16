@@ -7,8 +7,7 @@ import { CalendarEvent } from '../interfaces/calendar-event.interface';
   styleUrls: ['./calendar-day.component.scss']
 })
 export class CalendarDayComponent implements OnInit {
-  @Input() dayName: string;
-  @Input() dayMonth: string;
+  @Input() day: string;
   @Input() timesToExcludePerDay: any;
 
   quarterHours = ["00", "15", "30", "45"]
@@ -23,13 +22,17 @@ export class CalendarDayComponent implements OnInit {
     this.times = [];
     for (var i = 0; i < 24; i++) {
       for (var j = 0; j < 4; j++) {
-        this.times.push(i + ":" + this.quarterHours[j]);
+        if (i > 9) {
+          this.times.push(i + ":" + this.quarterHours[j]);
+        } else {
+          this.times.push('0' + i + ":" + this.quarterHours[j]);
+        }
       }
     }
   }
 
-  openDialog(time) {
-    console.log(time)
+  openDialog(day, time) {
+    console.log(day + ' ' + time)
   }
 
 }

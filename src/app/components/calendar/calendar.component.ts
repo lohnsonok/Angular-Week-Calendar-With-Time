@@ -19,6 +19,8 @@ export class CalendarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.date.setDate(this.date.getDate() + 1)
+
     for (let i = 0; i < 7; i++) {
       this.increment(this.date, i)
     }
@@ -66,10 +68,7 @@ export class CalendarComponent implements OnInit {
   decrement(date: Date, i) {
     date = new Date(date)
     date.setDate(date.getDate() - i)
-    console.log(date)
-
     this.currentWeek.push(date);
   }
-
 
 }
