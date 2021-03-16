@@ -1,4 +1,4 @@
-# Simple Weekday Calendar Component
+# Simple Week Calendar Component Based On Working Business Days
 
 ## Demo
 
